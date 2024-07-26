@@ -1,0 +1,47 @@
+body, html, .App {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  header nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content:flex-end;
+    background-color: transparent;
+    padding: 10px;
+    margin-top: 50px;
+    margin-right: 300px;
+  }
+  
+  header nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 10px;
+    font-size: 1.5em;
+  }
+  
+  header nav ul li a:hover {
+    background-color: whitesmoke;
+    border-radius: 5px;
+    color: #575757;
+  }
+
+  .logo-img {
+    width: 150px;
+    height: auto;
+    margin-left: 300px;
+    margin-top: -90px;
+    animation: rotate 15s linear infinite; 
+    /* need to work on that  */
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+

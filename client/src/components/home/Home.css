@@ -1,0 +1,54 @@
+* {
+    color: #fff;
+}
+body {
+    background-image: url('../images/homePage.jpg');
+    /* background-size: cover; */
+    /* background-position: center;  */
+    background-repeat: no-repeat;
+}
+
+h1 {
+    text-align: center;
+    color: rgb(226, 209, 12);
+    font-size: 3em;
+    font-family: italic;
+    text-shadow: 0 0 5px rgb(24, 184, 184), 0 0 10px rgb(24, 184, 184), 0 0 20px rgb(24, 184, 184), 0 0 30px rgb(24, 184, 184), 0 0 40px rgb(24, 184, 184), 0 0 50px rgb(24, 184, 184), 0 0 60px rgb(24, 184, 184);
+}
+
+p {
+    text-align: center;
+    font-size: 1.2em;
+    font-style: italic;
+}
+
+.carousel-container {
+    width: 50%; 
+    margin: 0 auto; 
+    padding: 50px 0;
+}
+
+.slide-image {
+    width: 95%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 0 1em 0 rgb(0, 0, 0, 0.2); 
+    margin-left: 12px; 
+}
+  
+  .slick-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .slick-dots li button:before {
+    color: #333; 
+  }
+  
+  .slick-prev:before,
+  .slick-next:before {
+    color: #333; 
+  }
+
+

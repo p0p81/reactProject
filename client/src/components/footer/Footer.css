@@ -1,0 +1,12 @@
+.footer-section {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: whitesmoke;
+    margin: 0 auto;
+    padding: 10px;
+    text-align: center;
+    font-size: 1.3em;
+
+}

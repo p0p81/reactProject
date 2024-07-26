@@ -1,5 +1,6 @@
 import React from "react";
 import './Catalog.css'
+// import { Link } from "react-router-dom";
 
 const items = [
     {
@@ -43,6 +44,9 @@ export default function Catalog() {
             <p><strong>Email:</strong> {item.email}</p>
             <p><strong>Phone:</strong> {item.phone}</p>
           </div>
+          {/* <div className="button-details">
+            <Link>Details</Link>
+          </div> */}
         </div>
       ))}
     </div>

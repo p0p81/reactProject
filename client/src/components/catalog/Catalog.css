@@ -94,6 +94,9 @@
   }
   
   .right-section {
+    color: #fff;
+    /* filter:blur(5px); */
+    position: relative;
     background-color: black;
     padding: 20px;
     display: flex;
@@ -102,7 +105,18 @@
     /* align-items: start; */
     width: 380px;
   }
-  
+  .button-details {
+    position: absolute;
+    bottom: 50%;
+    left:60%;
+    right: 0;
+    /* background-color: #f7c908; */
+    text-decoration: none;
+    padding: 0.4em;
+    width: 50px;
+    border-radius: 10px;
+    filter: initial;
+  }
   .right-section p {
     margin: 8px 0;
     font-size: 1em;

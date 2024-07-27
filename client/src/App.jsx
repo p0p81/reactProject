@@ -7,6 +7,8 @@ import Register from "./components/register/Register";
 import Catalog from "./components/catalog/Catalog";
 import AddCard from "./components/addCard/AddCard";
 import Search from "./components/search/Search";
+import NotFound from "./components/notFound/NotFound";
+
 
 function App() {
   return (
@@ -22,6 +24,7 @@ function App() {
           <Route path="/catalog" element={<Catalog />} />
           <Route path="/addCard" element={<AddCard />} />
           <Route path="/search" element={<Search />} />
+          <Route path="*" element={<NotFound/>}/>
         </Routes>
       </main>
 

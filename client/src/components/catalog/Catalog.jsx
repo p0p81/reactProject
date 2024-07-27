@@ -6,7 +6,7 @@ const items = [
     {
       id: 1,
       name: 'Kiril Tonev',
-      age: 45,
+      experience: 17,
       email: 'k.tonev@gmail.com',
       phone: '123-456-7890',
       profession: 'Electrician',
@@ -15,7 +15,7 @@ const items = [
     {
       id: 2,
       name: 'Icona Georgiev',
-      age: 40,
+      experience: 8,
       email: 'muscleman@abv.com',
       phone: '098-765-4321',
       profession: 'Painter',
@@ -30,6 +30,7 @@ export default function Catalog() {
   return (
 
     <div className="catalog">
+      {/* <h1>List Of Experts</h1> */}
       {items.map((item) => (
         <div key={item.id} className="catalog-item">
           <div className="left-section">
@@ -40,7 +41,7 @@ export default function Catalog() {
             <p className="profession">{item.profession}</p>
           </div>
           <div className="right-section">
-            <p><strong>Age:</strong> {item.age}</p>
+            <p><strong>Experience:</strong> {item.experience} years</p>
             <p><strong>Email:</strong> {item.email}</p>
             <p><strong>Phone:</strong> {item.phone}</p>
           </div>

@@ -6,32 +6,56 @@ import Login from "./components/login/Login";
 import Register from "./components/register/Register";
 import Catalog from "./components/catalog/Catalog";
 import AddCard from "./components/addCard/AddCard";
-import Details from "./components/details/Details"
+import Details from "./components/details/Details";
 import Search from "./components/search/Search";
 import NotFound from "./components/notFound/NotFound";
-
+import { useState } from "react";
+import { authContext } from "./context/authContext";
 
 function App() {
+  const [authState, setAuthState] = useState([]);
+
+  const changeAuthState = (state) => {
+    localStorage.setItem("accessToken", state.accessToken);
+    setAuthState(state);
+  };
+
+  const logout = () => {
+    localStorage.removeItem("accessToken");
+    setAuthState({});
+  };
+
+  const contextData = {
+    userId: authState._id,
+    email: authState.email,
+    accessToken: authState.accessToken,
+    isAuthenticated: !!authState.email,
+    changeAuthState,
+    logout,
+  };
+
   return (
-    <div id="box">
-      <Header />
+    <authContext.Provider value={contextData}>
 
-      
-      <main id="main-content">
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/register" element={<Register />} />
-          <Route path="/catalog" element={<Catalog />} />
-          <Route path="catalog/:cardId/details" element={<Details/>}/>
-          <Route path="/addCard" element={<AddCard />} />
-          <Route path="/search" element={<Search />} />
-          <Route path="*" element={<NotFound/>}/>
-        </Routes>
-      </main>
+      <div id="box">
+        <Header />
 
-      <Footer />
-    </div>
+        <main id="main-content">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/register" element={<Register />} />
+            <Route path="/catalog" element={<Catalog />} />
+            <Route path="catalog/:cardId/details" element={<Details />} />
+            <Route path="/addCard" element={<AddCard />} />
+            <Route path="/search" element={<Search />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </main>
+
+        <Footer />
+      </div>
+    </authContext.Provider>
   );
 }
 

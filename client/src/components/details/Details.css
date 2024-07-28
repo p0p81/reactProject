@@ -105,12 +105,24 @@
     /* align-items: start; */
     width: 380px;
   }
-  .button-details {
+  .button-edit {
     position: absolute;
-    bottom: 50%;
-    left:60%;
+    bottom: 15%;
+    left:45%;
     right: 0;
     background-color: #f7c908;
+    text-decoration: none;
+    padding: 0.4em;
+    width: 50px;
+    border-radius: 5px;
+    filter: initial;
+  }
+  .button-delete {
+    position: absolute;
+    bottom: 15%;
+    left:80%;
+    right: 0;
+    background-color: #a51d08;
     text-decoration: none;
     padding: 0.4em;
     width: 50px;

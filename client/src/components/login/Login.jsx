@@ -1,6 +1,7 @@
 import './Login.css';
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import {Link, useNavigate} from 'react-router-dom';
+import { authContext } from '../../context/authContext';
 
 
 
@@ -10,6 +11,7 @@ export default function Login () {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const navigate = useNavigate();
+  const {changeAuthState} = useContext(authContext);
 
   const submitHandler = async (e) => {
         e.preventDefault();
@@ -27,7 +29,8 @@ export default function Login () {
             const data = await response.json();
 
             if(response.ok) {
-                console.log ('Login successful:', data);
+              localStorage.setItem('accessToken', data.accessToken);
+              changeAuthState(data);
                 navigate('/')
             }
         } catch (error) {

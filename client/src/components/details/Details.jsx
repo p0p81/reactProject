@@ -1,29 +1,24 @@
-import React, { useEffect, useState } from "react";
-import './Catalog.css'
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom"
+import { useState, useEffect } from "react";
 import cardsApi from "../../api/cards-api";
+import './Details.css'
 
 
-  
+export default function Details () {
 
-
-export default function Catalog() {
-
-  const [cards, setCards] = useState([]);
+    const [card, setCard] = useState({});
+    const {cardId} = useParams();
 
   useEffect(() => {
     (async() => {
-      const result = await cardsApi.getAll()
-      setCards(result)
+      const result = await cardsApi.getOne(cardId)
+      setCard(result)
     })();
-  }, []);
+  }, [cardId]);
 
-  return (
-
-    <div className="catalog">
-      {/* <h1>List Of Experts</h1> */}
-      {cards.map((card) => (
-        <div key={card._id} className="catalog-card">
+    return (
+        <div className="details">
+        <div key={card.id} className="catalog-card">
           <div className="left-section">
           <div className="photo-container">
               <img src={card.photoId} alt={card.name} className="photo" />
@@ -37,10 +32,12 @@ export default function Catalog() {
             <p><strong>Phone:</strong> {card.phone}</p>
           </div>
           <div className="button-details">
-            <Link to={`/catalog/${card._id}/details`}>Details</Link>
+            <Link to={`/catalog`}>Edit</Link>
+          </div>
+          <div className="button-details">
+            <Link to={`/catalog`}>Delete</Link>
           </div>
         </div>
-      ))}
-    </div>
-  );
+        </div>
+    )
 }

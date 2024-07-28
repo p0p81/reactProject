@@ -1,0 +1,44 @@
+{
+        "c0e2239c-c871-4467-af28-4ea48d53d2c1": {
+            "imageUrl": "/public/images/icon_13.png",
+            "title": "Cardio",
+            "level": "Beginners",
+            "description": "Cardio is shorthand for cardiovascular training, and it encompasses any exercise—such as running or cycling .Cardio is also considered aerobic exercise, meaning it demands elevated oxygen flow, which causes you to breathe harder. Cardio is essential if you want to burn calories, strengthen your heart and lungs, and be healthier overal",
+            "_id": "c0e2239c-c871-4467-af28-4ea48d53d2c1"
+        },
+        "b06e9296-8acf-437d-93fe-f47d91dad9e3": {
+            "imageUrl": "/public/images/icon_5.png",
+            "title": "Yoga",
+            "level": "Advance",
+            "description": "Yoga is a system of repetitive exercises performed on a yoga mat or other equipment to promote strength, stability, and flexibility. Pilates exercises develop the body through muscular effort that stems from the core.",
+            "_id": "b06e9296-8acf-437d-93fe-f47d91dad9e3"
+        },
+        "80a98480-66e8-47d6-9fa4-d38d33e6a666": {
+            "imageUrl": "/public/images/icon_7.png",
+            "title": "Weight training",
+            "level": "Beginners",
+            "description": "The activity of lifting heavy objects for exercise, especially to improve the strength of muscles and the appearance of the body.",
+            "_id": "80a98480-66e8-47d6-9fa4-d38d33e6a666"
+        },
+        "dd7d9b7f-ae3f-40bf-b4ca-7e1b8943c237": {
+            "imageUrl": "/public/images/icon_1.png",
+            "title": "Pilates",
+            "level": "Advance",
+            "description": "Pilates is a system of repetitive exercises performed on a yoga mat or other equipment to promote strength, stability, and flexibility. Pilates exercises develop the body through muscular effort that stems from the core.",
+            "_id": "dd7d9b7f-ae3f-40bf-b4ca-7e1b8943c237"
+        },
+        "ba6302ba-28c7-445e-bdab-db0127a7c334": {
+            "imageUrl": "/public/images/icon_2.png",
+            "title": "Swimming Pool",
+            "level": "Advance",
+            "description": "Enjoy swimming long lengths in our indoor 20m swimming pool, take a dip in the jacuzzi, or rest in our poolside steam room and sauna.As well as our large laned swimming area, we also offer a separate recreational/children’s swimming area ideal for little ones to enjoy some water-based fun.",
+            "_id": "ba6302ba-28c7-445e-bdab-db0127a7c334"
+        },
+        "3765ba63-aacd-475a-b30c-75b4554ab80b": {
+            "imageUrl": "/public/images/icon_3.png",
+            "title": "Healthy diet planl",
+            "level": "Beginners",
+            "description": "However, a diet plan is tailored to an individual's health status, weight and lifestyle, along with their weight loss and health goals. The diet plan acts as a bespoke template to steer your eating behaviour, exercise and lifestyle management towards optimal health and wellbeing.",
+            "_id": "3765ba63-aacd-475a-b30c-75b4554ab80b"
+        }
+}

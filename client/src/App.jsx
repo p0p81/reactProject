@@ -6,6 +6,7 @@ import Login from "./components/login/Login";
 import Register from "./components/register/Register";
 import Catalog from "./components/catalog/Catalog";
 import AddCard from "./components/addCard/AddCard";
+import Details from "./components/details/Details"
 import Search from "./components/search/Search";
 import NotFound from "./components/notFound/NotFound";
 
@@ -22,6 +23,7 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="/catalog" element={<Catalog />} />
+          <Route path="catalog/:cardId/details" element={<Details/>}/>
           <Route path="/addCard" element={<AddCard />} />
           <Route path="/search" element={<Search />} />
           <Route path="*" element={<NotFound/>}/>

@@ -26,9 +26,9 @@ export default function Catalog() {
         <div key={card._id} className="catalog-card">
           <div className="left-section">
           <div className="photo-container">
-              <img src={card.photoId} alt={card.name} className="photo" />
+              <img src={card.photo} alt={card.fullName} className="photo" />
             </div>
-            <h2>{card.name}</h2>
+            <h2>{card.fullName}</h2>
             <p className="profession">{card.profession}</p>
           </div>
           <div className="right-section">

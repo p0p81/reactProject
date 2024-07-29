@@ -32,7 +32,7 @@ export default function Header() {
                 <Link to="/catalog">Experts</Link>
               </li>
               <li>
-                <button onClick={handleLogout}>Logout</button>
+                <Link to="/" onClick={handleLogout}>Logout</Link>
               </li>
             </div>
           ) : (

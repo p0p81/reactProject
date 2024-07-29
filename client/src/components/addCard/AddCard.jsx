@@ -1,19 +1,58 @@
+import { useNavigate } from 'react-router-dom';
 import './AddCard.css';
 import React from 'react';
+import { useCreateCard } from '../../hooks/useCards';
+import { useForm } from '../../hooks/useForm';
+
+
+
+const initialValues = {
+    fullName: '',
+    email: '',
+    experience: '',
+    profession: '',
+    phone: '',
+    photo: '',
+}
+
 
 export default function AddCard() {
+
+    const navigate = useNavigate();
+    const createCard = useCreateCard();
+
+    const createHandler = async(values) => {
+        try {
+            const {_id: cardId} = await createCard(values)
+            navigate('/catalog')
+
+        } catch (error) {
+            alert(error.message)
+        }
+    }
+
+    const {
+        values,
+        changeHandler,
+        submitHandler
+    } = useForm(initialValues, createHandler)
+
+
+
   return (
     <div className="form-card">
       <h2>Add Business Card</h2>
-      <form>
+      <form onSubmit={submitHandler}>
 
         <div className="form-group">
           <label htmlFor="name">Name:</label>
             <input
                 type="name"
                 id="name"
-                name="name"
-                placeholder="First & Last Name"
+                name="fullName"
+                placeholder="Full Name"
+                value={values.fullName}
+                onChange={changeHandler}
                 required
             />
         </div>
@@ -25,6 +64,8 @@ export default function AddCard() {
                 id="email"
                 name="email"
                 placeholder="Email Address"
+                value={values.email}
+                onChange={changeHandler}
                 required
             />
         </div>
@@ -36,6 +77,8 @@ export default function AddCard() {
                 id="experience"
                 name="experience"
                 placeholder="Years Of Experience"
+                value={values.experience}
+                onChange={changeHandler}
                 required 
                 />
         </div>
@@ -47,6 +90,8 @@ export default function AddCard() {
                 id="profession"
                 name="profession"
                 placeholder="Profession"
+                value={values.profession}
+                onChange={changeHandler}
                 required
             />
         </div>
@@ -58,6 +103,8 @@ export default function AddCard() {
                 id="phone"
                 name="phone"
                 placeholder="Phone Number"
+                value={values.phone}
+                onChange={changeHandler}
                 required
             />
         </div>
@@ -69,6 +116,8 @@ export default function AddCard() {
                 id="photo"
                 name="photo"
                 placeholder="Upload Photo"
+                value={values.photo}
+                onChange={changeHandler}
                 required
             />
         </div>

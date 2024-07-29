@@ -12,7 +12,7 @@
     display: flex;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s;
+    /* transition: transform 0.2s; */
     background-color: #fff;
     width: 470px;
     height: 280px;
@@ -49,9 +49,9 @@
   width: 60%;
 }
   
-  .catalog-card:hover {
+  /* .catalog-card:hover {
     transform: scale(1.05);
-  }
+  } */
   
   .left-section {
     background-color: #f7c908;

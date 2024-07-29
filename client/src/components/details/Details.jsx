@@ -28,15 +28,15 @@ export default function Details () {
 
     return (
         <div className="details">
-        <div className="catalog-card">
-          <div className="left-section">
-          <div className="photo-container">
+        <div className="details-card">
+          <div className="details-left-section">
+          <div className="details-photo-container">
               <img src={card.photo} alt={card.fullName} className="photo" />
             </div>
             <h2>{card.fullName}</h2>
             <p className="profession">{card.profession}</p>
           </div>
-          <div className="right-section">
+          <div className="details-right-section">
             <p><strong>Experience:</strong> {card.experience} years</p>
             <p><strong>Email:</strong> {card.email}</p>
             <p><strong>Phone:</strong> {card.phone}</p>

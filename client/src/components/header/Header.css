@@ -36,6 +36,13 @@ body, html, .App {
     /* need to work on that  */
 }
 
+.guest {
+  display: flex;
+}
+
+.user {
+  display: flex;
+}
 @keyframes rotate {
   from {
     transform: rotate(0deg);

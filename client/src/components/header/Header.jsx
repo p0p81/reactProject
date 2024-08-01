@@ -20,8 +20,9 @@ export default function Header() {
             <Link to="/">Home</Link>
           </li>
           <li>
-            <Link to="/search">Search</Link>
+            <Link to="/aboutUs">About Us</Link>
           </li>
+
 
           {isAuthenticated ? (
             <div className="user">
@@ -30,6 +31,9 @@ export default function Header() {
               </li>
               <li>
                 <Link to="/catalog">Experts</Link>
+              </li>
+              <li>
+                <Link to="/search">Search</Link>
               </li>
               <li>
                 <Link to="/" onClick={handleLogout}>Logout</Link>

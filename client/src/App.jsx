@@ -11,6 +11,8 @@ import Search from "./components/search/Search";
 import NotFound from "./components/notFound/NotFound";
 import { useState } from "react";
 import { authContext } from "./context/authContext";
+import PrivacyGuard from "./components/PrivacyGuard";
+import AboutUs from "./components/about/AboutUs";
 
 function App() {
   const [authState, setAuthState] = useState([]);
@@ -45,11 +47,16 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
-            <Route path="/catalog" element={<Catalog />} />
             <Route path="catalog/:cardId/details" element={<Details />} />
-            <Route path="/addCard" element={<AddCard />} />
             <Route path="/search" element={<Search />} />
+            <Route path="/aboutUs" element={<AboutUs />} />
             <Route path="*" element={<NotFound />} />
+            <Route element={<PrivacyGuard/>}>
+            
+            <Route path="/catalog" element={<Catalog />} />
+            <Route path="/addCard" element={<AddCard />} />
+            
+            </Route>
           </Routes>
         </main>
 

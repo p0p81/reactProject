@@ -4,7 +4,7 @@ import './AboutUs.css';
 export default function AboutUs() {
   return (
     <div className="about-us">
-      <h3>About Us</h3>
+      <h1>About Us</h1>
       <img src="./images/carpenter.png" alt="logo" className="about-us-img" />
       <p>
         Welcome to our website, your one-stop destination for finding and advertising professional services in various fields. 

@@ -14,8 +14,9 @@ export default function Catalog() {
   }, []);
 
   return (
+    <div className={styles.container}>
+      <h1>List Of Experts</h1>
     <div className={styles.catalog}>
-      {/* <h1>List Of Experts</h1> */}
       {cards.map((card) => (
         <div key={card._id} className={styles.catalogCard}>
           <div className={styles.leftSection}>
@@ -35,6 +36,7 @@ export default function Catalog() {
           </div>
         </div>
       ))}
+    </div>
     </div>
   );
 }

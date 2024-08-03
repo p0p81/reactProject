@@ -18,6 +18,10 @@
     height: 280px;
     overflow: hidden;
   }
+  
+  .container h1 {
+    font-size: 2.5em;
+  }
 
   
 .catalogCard::before,

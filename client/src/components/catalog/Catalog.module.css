@@ -7,7 +7,7 @@
     padding: 20px;
   }
   
-  .catalog-card {
+  .catalogCard {
     position: relative;
     display: flex;
     border-radius: 8px;
@@ -20,8 +20,8 @@
   }
 
   
-.catalog-card::before,
-.catalog-card::after {
+.catalogCard::before,
+.catalogCard::after {
   content: '';
   position: absolute;
   top: 10px;
@@ -32,7 +32,7 @@
   z-index: 1;
 }
 
-.catalog-card::before {
+.catalogCard::before {
   left: 10px;
   border: 3px solid black;
   border-right: none; 
@@ -41,7 +41,7 @@
   width: 40%;
 }
 
-.catalog-card::after {
+.catalogCard::after {
   right: 10px;
   border: 3px solid #f7c908;
   border-left: none;
@@ -49,11 +49,11 @@
   width: 60%;
 }
   
-  .catalog-card:hover {
+  .catalogCard:hover {
     transform: scale(1.05);
   }
   
-  .left-section {
+  .leftSection {
     background-color: #f7c908;
     padding: 20px;
     text-align: center;
@@ -65,7 +65,7 @@
     justify-content: center;
   }
 
-  .photo-container {
+  .photoContainer {
     width: 100px;
     height: 100px;
     /* margin-bottom: 10px; */
@@ -81,7 +81,7 @@
     object-fit: cover;
   }
   
-  .left-section h2 {
+  .leftSection h2 {
     margin: 10px 0;
     color: black;
     font-size: 1.2em;
@@ -93,7 +93,7 @@
     color: black;
   }
   
-  .right-section {
+  .rightSection {
     color: #fff;
     filter:blur(5px);
     position: relative;
@@ -105,7 +105,7 @@
     /* align-items: start; */
     width: 380px;
   }
-  .button-details {
+  .buttonDetails {
     position: absolute;
     bottom: 50%;
     left:60%;
@@ -117,12 +117,12 @@
     border-radius: 5px;
     filter: initial;
   }
-  .right-section p {
+  .rightSection p {
     margin: 8px 0;
     font-size: 1em;
   }
   
-  .right-section strong {
+  .rightSection strong {
     color: #f7c908;
   }
   

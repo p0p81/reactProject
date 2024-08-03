@@ -14,6 +14,9 @@ export default function Header() {
 
   return (
     <header>
+      <Link to="/">
+        <img src="./images/logo.png" alt="logo" className="logo-img" />
+      </Link>
       <nav>
         <ul>
           <li>
@@ -51,9 +54,6 @@ export default function Header() {
           )}
         </ul>
       </nav>
-      <Link to="/">
-        <img src="./images/logo.png" alt="logo" className="logo-img" />
-      </Link>
     </header>
   );
 }

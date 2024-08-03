@@ -12,6 +12,7 @@ export default function Login () {
   const [password, setPassword] = useState('');
   const navigate = useNavigate();
   const {changeAuthState} = useContext(authContext);
+  const [error, setError] = useState(null);
 
   const submitHandler = async (e) => {
         e.preventDefault();
@@ -32,9 +33,18 @@ export default function Login () {
               localStorage.setItem('accessToken', data.accessToken);
               changeAuthState(data);
                 navigate('/')
+
+            } else if (response.status === 403) {
+                setError('Invalid Email or Password')
+
+            } else {
+                setError(data.message || 'An error occurred. Please try again.')
             }
+
+
         } catch (error) {
-            console.log(error.message);
+            console.error('Fetch Error:', error);
+            setError('An error occurred. Please try again.')
         }
 
   }
@@ -67,6 +77,13 @@ export default function Login () {
                     required 
                     />
                   </div>
+
+                  {error && 
+                      <div className='error-msg'>
+                        {error}
+                      </div>
+                  }
+
                   <button type="submit">Login</button>
                 </form>
                 <p>

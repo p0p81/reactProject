@@ -1,42 +1,36 @@
 import React, { useEffect, useState } from "react";
-import './Catalog.css'
+import styles from './Catalog.module.css';
 import { Link } from "react-router-dom";
 import cardsApi from "../../api/cards-api";
 
-
-  
-
-
 export default function Catalog() {
-
   const [cards, setCards] = useState([]);
 
   useEffect(() => {
-    (async() => {
-      const result = await cardsApi.getAll()
-      setCards(result)
+    (async () => {
+      const result = await cardsApi.getAll();
+      setCards(result);
     })();
   }, []);
 
   return (
-
-    <div className="catalog">
+    <div className={styles.catalog}>
       {/* <h1>List Of Experts</h1> */}
       {cards.map((card) => (
-        <div key={card._id} className="catalog-card">
-          <div className="left-section">
-          <div className="photo-container">
-              <img src={card.photo} alt={card.fullName} className="photo" />
+        <div key={card._id} className={styles.catalogCard}>
+          <div className={styles.leftSection}>
+            <div className={styles.photoContainer}>
+              <img src={card.photo} alt={card.fullName} className={styles.photo} />
             </div>
             <h2>{card.fullName}</h2>
-            <p className="profession">{card.profession}</p>
+            <p className={styles.profession}>{card.profession}</p>
           </div>
-          <div className="right-section">
+          <div className={styles.rightSection}>
             <p><strong>Experience:</strong> {card.experience} years</p>
             <p><strong>Email:</strong> {card.email}</p>
             <p><strong>Phone:</strong> {card.phone}</p>
           </div>
-          <div className="button-details">
+          <div className={styles.buttonDetails}>
             <Link to={`/catalog/${card._id}/details`}>Details</Link>
           </div>
         </div>

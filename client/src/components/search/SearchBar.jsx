@@ -4,6 +4,7 @@ export default function SearchBar({ onSearch }) {
   const [inputValue, setInputValue] = useState("");
 
   const handleInputChange = (e) => {
+    e.preventDefault()
     setInputValue(e.target.value);
   };
 

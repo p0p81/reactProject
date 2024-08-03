@@ -13,7 +13,6 @@
   
   .about-us p {
     font-size: 1.3em;
-    /* color: #333; */
     color: whitesmoke;
     line-height: 1.6;
     margin-bottom: 20px;
@@ -25,4 +24,22 @@
     margin-left: 210px;
     margin-top: -120px;
   }
+
+  @media (max-width: 770px) {
+    .about-us h3 {
+      font-size: 2em;
+    }
+  
+    .about-us p {
+      font-size: 1.1em;
+    }
+  
+    .about-us-img {
+      margin-left: 0;
+      margin-top: 20px;
+      display: block;
+      margin: 0 auto; 
+    }
+  }
+  
   

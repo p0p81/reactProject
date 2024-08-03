@@ -8,11 +8,18 @@ export default function Register() {
   const BASE_URL = 'http://localhost:3030/users/register';
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [rePassword, setRePassword] = useState('');
   const navigate = useNavigate();
   const {changeAuthState} = useContext(authContext);
+  const [error, setError] = useState(null);
 
   const submitHandler = async (e) => {
     e.preventDefault();
+
+    if (password !== rePassword) {
+      setError('Password mismatch')
+      return
+    }
 
     try {
       const response = await fetch(BASE_URL, {
@@ -69,12 +76,17 @@ export default function Register() {
                 <label htmlFor="confirm-password">Confirm Password:</label>
                     <input 
                         type="password" 
-                        id="confirm-password" 
-                        name="confirm-password" 
+                        id="rePassword" 
+                        name="rePassword" 
                         placeholder="Confirm Password" 
+                        value={rePassword}
+                        onChange={(e) => setRePassword(e.target.value)}
                         required 
                     />
           </div>
+          {error &&
+              <div className='error-msg'>{error}</div>
+          }
           <button type="submit">Register</button>
       </form>
       <p>

@@ -48,7 +48,7 @@ export default function Details () {
           {isOwner && (
             <>
               <div className="button-edit">
-                <Link to={`/catalog`}>Edit</Link>
+                <Link to={`/catalog/${cardId}/edit`}>Edit</Link>
               </div>
               <div className="button-delete">
                 <Link to={'/catalog'} onClick={deleteHandler}>Delete</Link>

@@ -9,21 +9,26 @@ import AddCard from "./components/addCard/AddCard";
 import Details from "./components/details/Details";
 import Search from "./components/search/Search";
 import NotFound from "./components/notFound/NotFound";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { authContext } from "./context/authContext";
 import PrivacyGuard from "./components/PrivacyGuard";
 import AboutUs from "./components/about/AboutUs";
+import EditCard from "./components/edit/Edit";
+import PublicGuard from "./components/PublicGuard";
 
 function App() {
-  const [authState, setAuthState] = useState([]);
+  const [authState, setAuthState] = useState(() => {
+    const savedState = localStorage.getItem("authState");
+    return savedState ? JSON.parse(savedState) : {};
+  });
 
   const changeAuthState = (state) => {
-    localStorage.setItem("accessToken", state.accessToken);
+    localStorage.setItem("authState", JSON.stringify(state));
     setAuthState(state);
   };
 
   const logout = () => {
-    localStorage.removeItem("accessToken");
+    localStorage.removeItem("authState");
     setAuthState({});
   };
 
@@ -36,6 +41,13 @@ function App() {
     logout,
   };
 
+  useEffect(() => {
+    const storedAuthState = localStorage.getItem("authState");
+    if (storedAuthState) {
+      setAuthState(JSON.parse(storedAuthState));
+    }
+  }, []);
+
   return (
     <authContext.Provider value={contextData}>
 
@@ -44,19 +56,27 @@ function App() {
 
         <main id="main-content">
           <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/login" element={<Login />} />
-            <Route path="/register" element={<Register />} />
-            <Route path="catalog/:cardId/details" element={<Details />} />
-            <Route path="/search" element={<Search />} />
-            <Route path="/aboutUs" element={<AboutUs />} />
-            <Route path="*" element={<NotFound />} />
-            <Route element={<PrivacyGuard/>}>
-            
-            <Route path="/catalog" element={<Catalog />} />
-            <Route path="/addCard" element={<AddCard />} />
-            
-            </Route>
+              <Route path="/" element={<Home />} />
+
+              <Route element={<PublicGuard/>}>
+
+                  <Route path="/login" element={<Login />} />
+                  <Route path="/register" element={<Register />} />
+
+              </Route>
+
+              <Route path="/aboutUs" element={<AboutUs />} />
+              <Route path="*" element={<NotFound />} />
+
+              <Route element={<PrivacyGuard/>}>
+                
+                  <Route path="/search" element={<Search />} />
+                  <Route path="/catalog" element={<Catalog />} />
+                  <Route path="/addCard" element={<AddCard />} />
+                  <Route path="catalog/:cardId/details" element={<Details />} />
+                  <Route path="/catalog/:cardId/edit" element={<EditCard/>} />
+
+              </Route>
           </Routes>
         </main>
 

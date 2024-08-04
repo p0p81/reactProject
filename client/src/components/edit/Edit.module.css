@@ -1,0 +1,47 @@
+.formCard {
+    background-color: #1a2d46;
+    color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 300px;
+    margin: 20px auto;
+  }
+  
+  .formCard h2 {
+    margin: 0 0 20px;
+    font-size: 24px;
+  }
+  
+  .formGroup {
+    margin-bottom: 15px;
+  }
+  
+  .formGroup label {
+    display: block;
+    margin-bottom: 5px;
+    color: #ccc;
+  }
+  
+  .formGroup input {
+    width: 100%;
+    padding: 8px;
+    border-radius: 4px;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+  }
+  
+  button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }

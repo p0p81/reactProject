@@ -26,6 +26,10 @@
     margin-top: -120px;
   }
 
+  .highlight {
+    color: #FEE13B;
+  }
+
   @media (max-width: 770px) {
     .about-us h3 {
       font-size: 2em;

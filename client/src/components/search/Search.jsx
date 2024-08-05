@@ -1,13 +1,12 @@
-
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import SearchBar from "./SearchBar";
 import cardsApi from "../../api/cards-api";
 import "./Search.css";
 
-
 export default function SearchPage() {
   const [searchResults, setSearchResults] = useState([]);
+  const [searchPerformed, setSearchPerformed] = useState(false); 
 
   const handleSearch = async (searchInput) => {
     const result = await cardsApi.getAll();
@@ -15,13 +14,16 @@ export default function SearchPage() {
       card.profession.toLowerCase().includes(searchInput.toLowerCase())
     );
     setSearchResults(filteredResults);
+    setSearchPerformed(true); 
   };
 
   return (
     <div className="search-page">
       <SearchBar onSearch={handleSearch} />
       <div className="results-container">
-      {searchResults.length > 0 ? (
+        {searchPerformed && searchResults.length === 0 ? (
+          <p className="no-results">No results found</p>
+        ) : (
           searchResults.map((card) => (
             <div key={card._id} className="catalog-card">
               <div className="left-section">
@@ -41,8 +43,6 @@ export default function SearchPage() {
               </div>
             </div>
           ))
-        ) : (
-          <p className="no-results">No results found</p>
         )}
       </div>
     </div>

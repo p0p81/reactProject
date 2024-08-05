@@ -1,0 +1,31 @@
+.searchBar {
+    display: flex;
+    /* justify-content: center; */
+    margin-bottom: 20px;
+  }
+  
+  .searchBar input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    margin-right: 20px;
+  }
+
+  h3{
+    font-size: 2.5em;
+    color: #FEE13B;
+    text-align: center;
+    margin-bottom: 60px;
+  }
+
+  .searchBtn {
+    color: #0f0f0f;
+    background-color: #FEE13B;
+    font-weight: bold;
+  }
+
+  .searchBtn:hover {
+    background-color: #a5984e;
+  }
+
+ 

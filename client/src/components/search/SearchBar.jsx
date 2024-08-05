@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import styles from './SearchBar.module.css'
 
 export default function SearchBar({ onSearch }) {
   const [inputValue, setInputValue] = useState("");
@@ -10,19 +11,20 @@ export default function SearchBar({ onSearch }) {
 
   const handleSearch = () => {
     onSearch(inputValue);
+    setInputValue('')
   };
 
   return (
     <div>
         <h3>Find Your Expert</h3>
-    <div className="search-bar">
+    <div className={styles.searchBar}>
       <input
         type="text"
         placeholder="Search by profession"
         value={inputValue}
         onChange={handleInputChange}
       />
-      <button className='search-btn' onClick={handleSearch}>Search</button>
+      <button className={styles.searchBtn} onClick={handleSearch}>Search</button>
     </div>
     </div>
   );

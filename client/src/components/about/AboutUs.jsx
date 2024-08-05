@@ -7,7 +7,7 @@ export default function AboutUs() {
       <h1>About Us</h1>
       <img src="./images/carpenter.png" alt="logo" className="about-us-img" />
       <p>
-        Welcome to our website, your one-stop destination for finding and advertising professional services in various fields. 
+        Welcome to <strong class="highlight">HOME EXPERTS</strong> website, your one-stop destination for finding and advertising professional services in various fields. 
         Think of us as the modern-day Yellow Pages, designed specifically to connect experts and clients in the maintenance and service industry.
       </p>
       <p>

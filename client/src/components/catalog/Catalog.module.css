@@ -1,15 +1,17 @@
 
 .catalog {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     gap: 16px;
-    justify-content: center;
+    justify-content: flex-start;
     padding: 20px;
+    overflow-x: auto;
   }
   
   .catalogCard {
     position: relative;
     display: flex;
+    flex: 0 0 auto;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s;
@@ -109,18 +111,25 @@
     /* align-items: start; */
     width: 380px;
   }
-  .buttonDetails {
+  .buttonDetails a{
     position: absolute;
     bottom: 50%;
     left:60%;
     right: 0;
     background-color: #f7c908;
+    color:black;
     text-decoration: none;
     padding: 0.4em;
     width: 50px;
     border-radius: 5px;
     filter: initial;
   }
+
+  .buttonDetails a:hover {
+    text-decoration: none;
+    background-color: #d1a306; 
+  }
+
   .rightSection p {
     margin: 8px 0;
     font-size: 1em;
@@ -129,4 +138,28 @@
   .rightSection strong {
     color: #f7c908;
   }
+
+
+  /* scroll bar preference css */
   
+.catalog::-webkit-scrollbar {
+  height: 15px;
+}
+
+.catalog::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.catalog::-webkit-scrollbar-thumb {
+  background: #f7c908;
+}
+
+.catalog::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.catalog::-webkit-scrollbar-button {
+  background-color: rgb(240, 22, 22);
+
+}
+

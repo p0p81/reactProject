@@ -35,19 +35,8 @@ Navigate to the Server Directory:
 ```bash
 cd server
 ```
-
-Install Server Dependencies and Start the Server: 
-
 Execute the following commands in order to start the server.
-```bash
-npm install
-```
-```bash
-npm run client
-```
-```bash
-npm run build
-```
+
 ```bash
 node server.js
 ```

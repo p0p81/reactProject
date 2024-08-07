@@ -37,9 +37,11 @@ export default function Register() {
         localStorage.setItem('accessToken', data.accessToken);
         changeAuthState(data);
           navigate('/')
+      } else {
+        setError(data.message || 'Error, please try again!');
       }
   } catch (error) {
-      console.log(error.message);
+      setError('Error, please try again!')
   }
 
   }

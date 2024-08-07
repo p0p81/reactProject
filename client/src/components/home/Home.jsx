@@ -16,10 +16,9 @@ export default function Home() {
       };
       
     return(
-        <>
+        <div className='homeBox'>
     <h1>Renovate, Innovate, Create - <br /> Your Home, Our Fate!</h1>
-    <p>Your vision, our mission. Choose the right expert for the task.</p>
-    <p>All our experts are top picks with many years of experience.</p>
+    <p>Join our community today and take the first step towards connecting with the best professionals or reaching more clients.</p>
         <div className='carousel-container'>
             <Slider {...slidingSettings}>
                 <div>
@@ -34,7 +33,7 @@ export default function Home() {
             </Slider>
         </div>
        
-    </>
+    </div>
     )
 
 }

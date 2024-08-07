@@ -16,7 +16,7 @@ export default function SearchBar({ onSearch }) {
 
   return (
     <div>
-        <h3>Find Your Expert</h3>
+        <h3 className= {styles.searchInput}>Find Your Expert</h3>
     <div className={styles.searchBar}>
       <input
         type="text"

@@ -23,13 +23,13 @@ export default function Catalog() {
             <div className={styles.photoContainer}>
               <img src={card.photo} alt={card.fullName} className={styles.photo} />
             </div>
-            <h2>{card.fullName}</h2>
+            <h2 className= {styles.fullName} >{card.fullName}</h2>
             <p className={styles.profession}>{card.profession}</p>
           </div>
           <div className={styles.rightSection}>
-            <p><strong>Experience:</strong> {card.experience} years</p>
-            <p><strong>Email:</strong> {card.email}</p>
-            <p><strong>Phone:</strong> {card.phone}</p>
+            <p> className= {styles.experience} <strong>Experience:</strong> {card.experience} years</p>
+            <p> className= {styles.email} <strong>Email:</strong> {card.email}</p>
+            <p> className= {styles.phone} <strong>Phone:</strong> {card.phone}</p>
           </div>
           <div className={styles.buttonDetails}>
             <Link to={`/catalog/${card._id}/details`}>Details</Link>

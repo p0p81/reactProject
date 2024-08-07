@@ -3,19 +3,19 @@ body {
     background-image: url('../images/homePage.jpg');
     /* background-size: cover; */
     /* background-position: center;  */
-    background-repeat: no-repeat;
+    background-repeat: repeat;
 }
 
 h1 {
     text-align: center;
-    color: rgb(226, 209, 12);
+    color: #FEE13B;
     font-size: 3em;
     font-family: italic;
 }
 
-p {
+.homeBox p {
     text-align: center;
-    font-size: 1.2em;
+    font-size: 1.4em;
     font-style: italic;
     color: whitesmoke;
 }

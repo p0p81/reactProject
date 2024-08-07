@@ -24,6 +24,11 @@
   .container h1 {
     font-size: 2.5em;
   }
+  .container {
+    width: 77%;
+    margin: 0 auto;
+    overflow-x: hidden;
+  }
 
   
 .catalogCard::before,
@@ -49,7 +54,7 @@
 
 .catalogCard::after {
   right: 10px;
-  border: 3px solid #f7c908;
+  border: 3px solid #FEE13B;
   border-left: none;
   /* border-radius: 0 6px 6px 0; */
   width: 60%;
@@ -60,7 +65,7 @@
   }
   
   .leftSection {
-    background-color: #f7c908;
+    background-color: #FEE13B;
     padding: 20px;
     text-align: center;
     border-right: 1px solid #ddd;
@@ -116,7 +121,7 @@
     bottom: 50%;
     left:60%;
     right: 0;
-    background-color: #f7c908;
+    background-color: #FEE13B;
     color:black;
     text-decoration: none;
     padding: 0.4em;
@@ -127,7 +132,7 @@
 
   .buttonDetails a:hover {
     text-decoration: none;
-    background-color: #d1a306; 
+    background-color: #a5984e; 
   }
 
   .rightSection p {
@@ -136,7 +141,7 @@
   }
   
   .rightSection strong {
-    color: #f7c908;
+    color: #FEE13B;
   }
 
 
@@ -151,15 +156,15 @@
 }
 
 .catalog::-webkit-scrollbar-thumb {
-  background: #f7c908;
+  background: #FEE13B;
 }
 
 .catalog::-webkit-scrollbar-thumb:hover {
-  background: #555;
+  background: #7a5803;
 }
 
 .catalog::-webkit-scrollbar-button {
-  background-color: rgb(240, 22, 22);
+  background-color: #7a5803;
 
 }
 

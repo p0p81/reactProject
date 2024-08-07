@@ -45,10 +45,10 @@ export default function AddCard() {
       <form onSubmit={submitHandler}>
 
         <div className="form-group">
-          <label htmlFor="name">Name:</label>
+          <label htmlFor="fullName">Name:</label>
             <input
                 type="name"
-                id="name"
+                id="fullName"
                 name="fullName"
                 placeholder="Full Name"
                 value={values.fullName}
@@ -71,7 +71,7 @@ export default function AddCard() {
         </div>
 
         <div className="form-group">
-          <label htmlFor="age">Experience:</label>
+          <label htmlFor="experience">Experience:</label>
             <input
                 type="text"
                 id="experience"
